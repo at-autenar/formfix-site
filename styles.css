@@ -18,14 +18,15 @@ nav, footer div { display: flex; flex-wrap: wrap; gap: 16px; }
 .brand { color: var(--text); font-size: 1.2rem; font-weight: 700; text-decoration: none; }
 .brand, nav a, footer a, .actions a { display: inline-flex; min-height: 44px; align-items: center; }
 nav a, footer a { color: var(--muted); }
-main { padding: 44px 0 64px; }
+main { padding: 44px 0 40px; }
 h1 { margin-top: 0; font-size: 2rem; }
 h2 { margin-top: 2rem; font-size: 1.25rem; }
 .lead { color: var(--muted); font-size: 1.05rem; }
 section { margin-top: 2rem; }
 .intro { margin-top: 0; }
-.policy-meta { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.875rem; }
-.policy-meta div { display: grid; grid-template-columns: 110px 1fr; gap: 16px; }
+.policy-meta { display: flex; flex-wrap: wrap; gap: 6px 24px; margin: 36px 0 0; padding-top: 14px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.8125rem; }
+.policy-meta div { display: flex; gap: 6px; }
+.policy-meta dt::after { content: ":"; }
 .policy-meta dd { margin: 0; }
 .note, .warning { padding-left: 12px; border-left: 3px solid var(--accent); }
 .warning { border-left-color: var(--warning); color: var(--warning); }
@@ -35,16 +36,15 @@ section { margin-top: 2rem; }
 .test-fields input { width: 100%; min-height: 44px; padding: 8px; border: 1px solid var(--line); color: var(--text); background: var(--background); font: inherit; }
 a:focus-visible, .test-fields input:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 .test-fields small { color: var(--muted); }
-footer { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
-footer > p { grid-column: 2; text-align: center; }
-footer > div { grid-column: 3; justify-self: end; }
+footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; text-align: center; }
+footer > p { margin: 0; }
+footer > div { justify-content: center; margin-top: 4px; }
 
 @media (max-width: 640px) {
   header { display: block; }
   nav { margin-top: 8px; }
-  .policy-meta div { grid-template-columns: 1fr; gap: 0; }
-  footer { grid-template-columns: 1fr; justify-items: center; }
-  footer > p, footer > div { grid-column: 1; justify-self: center; }
+  .policy-meta { display: block; }
+  .policy-meta div { margin-top: 4px; }
 }
 
 @media (prefers-color-scheme: dark) {
