@@ -2,7 +2,6 @@
   color-scheme: light dark;
   --accent: #245e9b;
   --background: #f7f8fa;
-  --card: #ffffff;
   --text: #172033;
   --muted: #596579;
   --line: #dce2ec;
@@ -10,61 +9,44 @@
 }
 
 * { box-sizing: border-box; }
-html { font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; }
-body { margin: 0; color: var(--text); background: var(--background); }
-a { color: var(--accent); text-underline-offset: 0.2em; }
-.site-header, footer { display: flex; width: min(1080px, calc(100% - 40px)); margin: 0 auto; align-items: center; justify-content: space-between; gap: 24px; }
-.site-header { min-height: 68px; border-bottom: 1px solid var(--line); }
-.brand { color: var(--text); font-size: 1.25rem; font-weight: 800; text-decoration: none; }
-nav, footer div { display: flex; flex-wrap: wrap; gap: 20px; }
+html { font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; }
+body { max-width: 820px; margin: 0 auto; padding: 0 20px; color: var(--text); background: var(--background); }
+a { color: var(--accent); }
+header, footer { padding: 20px 0; border-color: var(--line); }
+header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); }
+nav, footer div { display: flex; flex-wrap: wrap; gap: 16px; }
+.brand { color: var(--text); font-size: 1.2rem; font-weight: 700; text-decoration: none; }
 .brand, nav a, footer a, .actions a { display: inline-flex; min-height: 44px; align-items: center; }
-nav a, footer a { color: var(--muted); font-weight: 650; text-decoration: none; }
-nav a[aria-current="page"] { color: var(--accent); }
-main { width: min(1080px, calc(100% - 40px)); margin: 0 auto; }
-h1, h2 { line-height: 1.35; }
-h1 { max-width: 820px; margin: 0; font-size: clamp(2rem, 5vw, 3rem); }
-.lead { max-width: 760px; margin: 20px 0 0; color: var(--muted); font-size: 1.1rem; }
-.button { display: inline-flex; min-height: 46px; align-items: center; padding: 8px 18px; border: 1px solid var(--accent); border-radius: 6px; color: white; background: var(--accent); font-weight: 700; text-decoration: none; }
-.home { max-width: 820px; padding: 64px 0 88px; }
-.home section { padding: 32px 0; border-bottom: 1px solid var(--line); }
-.home section:first-child { padding-top: 0; }
-.home section:last-child { border-bottom: 0; }
-.home h2 { margin: 0 0 14px; font-size: 1.3rem; }
-.home p, .home li { max-width: 760px; }
-.link-list { padding-left: 1.25rem; }
-.document { max-width: 820px; padding: 64px 0 88px; }
-.document h1 { font-size: clamp(2rem, 5vw, 3rem); }
-.document section { margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--line); }
-.document section h2 { margin: 0 0 14px; font-size: 1.25rem; }
-.document section p:last-child, .document section ul:last-child, .document section ol:last-child { margin-bottom: 0; }
-.note, .warning { padding: 12px 14px; border-left: 4px solid var(--accent); background: color-mix(in srgb, var(--accent) 6%, transparent); }
-.warning { border-left-color: var(--warning); color: var(--warning); background: color-mix(in srgb, var(--warning) 6%, transparent); font-weight: 650; }
-.policy-meta { display: grid; gap: 8px; margin: 24px 0 0; padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+nav a, footer a { color: var(--muted); }
+main { padding: 44px 0 64px; }
+h1 { margin-top: 0; font-size: 2rem; }
+h2 { margin-top: 2rem; font-size: 1.25rem; }
+.lead { color: var(--muted); font-size: 1.05rem; }
+section { margin-top: 2rem; }
+.intro { margin-top: 0; }
+.policy-meta { padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .policy-meta div { display: grid; grid-template-columns: 110px 1fr; gap: 16px; }
-.policy-meta dt { color: var(--muted); }
-.policy-meta dd { margin: 0; font-weight: 650; }
-.test-fields { display: grid; gap: 22px; }
-.test-fields > h2, .test-fields > p { margin: 0; }
-.test-fields label { display: grid; gap: 7px; }
+.policy-meta dd { margin: 0; }
+.note, .warning { padding-left: 12px; border-left: 3px solid var(--accent); }
+.warning { border-left-color: var(--warning); color: var(--warning); }
+.test-fields { display: grid; gap: 20px; }
+.test-fields label { display: grid; gap: 6px; }
 .test-fields label span { font-weight: 700; }
-.test-fields input { width: 100%; min-height: 50px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; color: var(--text); background: var(--background); font: inherit; }
+.test-fields input { width: 100%; min-height: 44px; padding: 8px; border: 1px solid var(--line); color: var(--text); background: var(--background); font: inherit; }
 a:focus-visible, .test-fields input:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 .test-fields small { color: var(--muted); }
-footer { display: grid; grid-template-columns: 1fr auto 1fr; min-height: 100px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+footer { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
 footer > p { grid-column: 2; text-align: center; }
 footer > div { grid-column: 3; justify-self: end; }
 
-@media (max-width: 720px) {
-  .site-header, footer { width: min(100% - 28px, 1080px); }
-  main { width: min(100% - 28px, 1080px); }
-  .site-header { align-items: flex-start; padding: 18px 0; }
-  nav { justify-content: flex-end; gap: 12px; }
+@media (max-width: 640px) {
+  header { display: block; }
+  nav { margin-top: 8px; }
   .policy-meta div { grid-template-columns: 1fr; gap: 0; }
-  footer { grid-template-columns: 1fr; justify-items: center; padding: 18px 0; gap: 8px; }
+  footer { grid-template-columns: 1fr; justify-items: center; }
   footer > p, footer > div { grid-column: 1; justify-self: center; }
-  footer div { justify-content: center; }
 }
 
 @media (prefers-color-scheme: dark) {
-  :root { --accent: #83b7ef; --background: #11151b; --card: #171c23; --text: #f3f6fb; --muted: #aeb8c8; --line: #303846; --warning: #fdba74; }
+  :root { --accent: #83b7ef; --background: #11151b; --text: #f3f6fb; --muted: #aeb8c8; --line: #303846; --warning: #fdba74; }
 }
