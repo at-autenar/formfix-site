@@ -24,7 +24,7 @@ h2 { margin-top: 2rem; font-size: 1.25rem; }
 .lead { color: var(--muted); font-size: 1.05rem; }
 section { margin-top: 2rem; }
 .intro { margin-top: 0; }
-.policy-meta { padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.policy-meta { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.875rem; }
 .policy-meta div { display: grid; grid-template-columns: 110px 1fr; gap: 16px; }
 .policy-meta dd { margin: 0; }
 .note, .warning { padding-left: 12px; border-left: 3px solid var(--accent); }
