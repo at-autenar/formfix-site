@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="App Store審査担当者向けFormFix動作確認ページ">
+  <link rel="stylesheet" href="styles.css">
+  <title>動作確認ページ | FormFix</title>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">FormFix</a>
+    <nav aria-label="主要メニュー">
+      <a href="support.html">サポート</a>
+      <a href="privacy.html">プライバシー</a>
+      <a href="accessibility.html">アクセシビリティ</a>
+    </nav>
+  </header>
+  <main class="document review-test">
+    <p class="eyebrow">App Review Test</p>
+    <h1>FormFix 動作確認</h1>
+    <p class="lead">このページは、FormFixの修正候補表示を安全に確認するためのテストページです。すべて架空の値で、入力内容を送信する機能はありません。</p>
+
+    <section aria-labelledby="review-steps-title">
+      <h2 id="review-steps-title">確認手順</h2>
+      <ol>
+        <li>Safariの設定でFormFix機能拡張を有効にします。</li>
+        <li>このページへのアクセスを許可します。</li>
+        <li>下の入力欄に対してFormFixの修正候補が表示されることを確認します。</li>
+        <li>「修正」を選ぶまでは値が変わらないことを確認します。</li>
+      </ol>
+      <p class="note">FormFixはこのページを自動送信しません。このページ自体にも送信機能はありません。</p>
+    </section>
+
+    <section class="test-fields" aria-labelledby="test-fields-title">
+      <h2 id="test-fields-title">修正候補の確認欄</h2>
+      <p>ページを再読み込みすると、最初の架空データへ戻ります。</p>
+      <label>
+        <span>電話番号（半角数字・ハイフンなし）</span>
+        <input name="telephone" type="tel" inputmode="numeric" maxlength="11" value="０９０－１２３４－５６７８">
+        <small>期待する候補：09012345678</small>
+      </label>
+      <label>
+        <span>郵便番号</span>
+        <input name="postal-code" autocomplete="postal-code" inputmode="numeric" value="〒１００－０００１">
+        <small>期待する候補：1000001</small>
+      </label>
+      <label>
+        <span>フリガナ（全角カタカナ）</span>
+        <input name="name-kana" autocomplete="phonetic-name" value="やまだ たろう">
+        <small>期待する候補：ヤマダタロウ</small>
+      </label>
+      <label>
+        <span>メールアドレス</span>
+        <input name="email" type="email" autocomplete="email" value="ｔｅｓｔ＠ｅｘａｍｐｌｅ．ｃｏｍ">
+        <small>期待する候補：test@example.com</small>
+      </label>
+      <label>
+        <span>生年月日（YYYY-MM-DD）</span>
+        <input name="birth-date" inputmode="numeric" placeholder="YYYY-MM-DD" value="２０００年１１月２０日">
+        <small>期待する候補：2000-11-20</small>
+      </label>
+    </section>
+
+    <section>
+      <h2>安全性の確認</h2>
+      <ul>
+        <li>候補表示だけでは入力値は変わりません。</li>
+        <li>修正は審査担当者が選択した項目だけに適用されます。</li>
+        <li>FormFixとこのページはフォームを送信しません。</li>
+        <li>このページは外部スクリプト、解析、Cookieを使用しません。</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>© 2026 FormFix</p>
+    <div><a href="index.html">トップ</a><a href="support.html">サポート</a></div>
+  </footer>
+</body>
+</html>
