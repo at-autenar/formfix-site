@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://at-autenar.github.io/formfix-site/sitemap.xml

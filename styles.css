@@ -24,10 +24,7 @@ h2 { margin-top: 2rem; font-size: 1.25rem; }
 .lead { color: var(--muted); font-size: 1.05rem; }
 section { margin-top: 2rem; }
 .intro { margin-top: 0; }
-.policy-meta { display: flex; flex-wrap: wrap; gap: 6px 24px; margin: 36px 0 0; padding-top: 14px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.8125rem; }
-.policy-meta div { display: flex; gap: 6px; }
-.policy-meta dt::after { content: ":"; }
-.policy-meta dd { margin: 0; }
+.policy-updated { margin: 36px 0 0; padding-top: 14px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.8125rem; }
 .note, .warning { padding-left: 12px; border-left: 3px solid var(--accent); }
 .warning { border-left-color: var(--warning); color: var(--warning); }
 .test-fields { display: grid; gap: 20px; }
@@ -43,8 +40,6 @@ footer > div { justify-content: center; margin-top: 4px; }
 @media (max-width: 640px) {
   header { display: block; }
   nav { margin-top: 8px; }
-  .policy-meta { display: block; }
-  .policy-meta div { margin-top: 4px; }
 }
 
 @media (prefers-color-scheme: dark) {
